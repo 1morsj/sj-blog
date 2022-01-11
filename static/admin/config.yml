@@ -13,6 +13,7 @@ public_folder: ../../static/images
 
 collections:
   - name: "blog"
+    preview_path: "blog/{{year}}/{{month}}/{{slug}}"
     label: "Blog"
     folder: "content/blog"
     create: true
