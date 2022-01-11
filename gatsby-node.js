@@ -15,6 +15,7 @@ require("ts-node").register({
 // typescript files
 exports.createPages = require("./src/createPages/createPages").createPages;
 
+//https://www.surinderbhomra.com/Blog/2020/01/11/Gatsby-Include-Date-In-Blog-Post-Slug
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions
 
