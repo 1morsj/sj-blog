@@ -5,7 +5,7 @@ publishedDate: 2022-01-11T02:05:50.331Z
 description: List of interesting words
 featured: false
 img: ../../static/images/keyboard-backlight.jpeg
-imgAlt: Temporary Image
+imgAlt: temp-image
 tags:
   - Self
 ---
