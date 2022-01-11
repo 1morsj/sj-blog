@@ -15,19 +15,3 @@ require("ts-node").register({
 // typescript files
 exports.createPages = require("./src/createPages/createPages").createPages;
 
-//https://www.surinderbhomra.com/Blog/2020/01/11/Gatsby-Include-Date-In-Blog-Post-Slug
-exports.onCreateNode = ({ node, actions, getNode }) => {
-    const { createNodeField } = actions
-
-    if (node.internal.type === `MarkdownRemark`) {
-      const relativeFilePath = createFilePath({ node, getNode, trailingSlash: false });
-      const postDate = moment(node.frontmatter.date); // Use moment.js to easily change date format.
-      const url = `/Blog/${postDate.format("YYYY/MM/DD")}${node.frontmatter.slug}`;
-
-      createNodeField({
-        name: `slug`,
-        node,
-        value: url,
-      });
-    }
-  }
